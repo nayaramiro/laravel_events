@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    
+}
+body{
+    height: 100vh;
+}
+nav img{
+    width: 50px;
+}
+nav .collapse{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#search-container{
+    height: 40vh;
+    background-color: rgb(56, 29, 56);
+    h1{
+        color: white;
+    }
+    margin-bottom: 100px;
+    
+}
+#events-container{
+    .card-date{
+        color: rgb(189, 189, 189);
+    }
+    .card-participants{
+        color: rgb(142, 142, 142);
+    }
+    img{
+        height: 230px;
+    }
+}
+footer{
+    height: 10vh;
+    background-color: rgb(56, 29, 56);
+    margin-top: 100px;
+    color: rgb(189, 189, 189);
+}
+.msg{
+    background: rgb(166, 206, 181);
+    color: rgb(64, 80, 70);
+    font-weight: bold;
+}
+#page-show{
+    .icon{
+        color: rgb(255, 111, 54);
+        
+    }
+}
+
