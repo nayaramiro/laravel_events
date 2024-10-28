@@ -70,4 +70,10 @@ class User extends Authenticatable
         //to know how many events belongs to one user
         return $this->hasMany('App\Models\Events');
     }
+
+    public function eventsAsParticipant(){
+
+        //One user have many Events
+        return $this->belongsToMany('App\Models\Events');
+    }
 }

@@ -54,4 +54,14 @@ footer{
         
     }
 }
+.dashboard-events-container{
+    table{
+        a{
+            text-decoration: none;
+        }
+    }
+}
+.img-preview{
+    max-width: 200px;
+}
 

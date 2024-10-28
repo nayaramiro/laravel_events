@@ -11,7 +11,7 @@
             <div id="info-container" class="col-md-6">
                 <h1>{{$event->title}}</h1>
                 <p class="event-city d-flex align-items-center"><ion-icon class="pr-3 icon" name="location-outline"></ion-icon>{{$event->city}}</p>
-                <p class="event-participants d-flex align-items-center"><ion-icon class="pr-3 icon" name="people-outline"></ion-icon>X participants</p>
+                <p class="event-participants d-flex align-items-center"><ion-icon class="pr-3 icon" name="people-outline"></ion-icon>Participants :{{count($event->users)}}</p>
 
                 {{-- get the name where user_id is... --}}
                 <p class="event-owner d-flex align-items-center"><ion-icon class="pr-3 icon" name="star-outline"></ion-icon>Created by : {{$eventOwner['name']}}</p>
@@ -22,7 +22,13 @@
                     <H3>About Event :</H3>
                     <p class="event-description">{{$event->description}}</p>
                 </div>
-                <a href="#" id="event-submit" class="btn btn-primary">confirm presence</a>
+                <form action="/events/join/{{$event->id}}" method="POST">
+                    @csrf
+                    <a href="/events/join/{{$event->id}}" class="btn btn-primary" id="event-submiot"
+                        onclick="event.preventDefault();
+                        this.closest('form').submit();"
+                        >Confirm presence</a>
+                </form>
                 <h3 class="pt-5">The Event Contains</h3>
                 <ul id="items-list" class="row">
                     @if($event->items == !null)

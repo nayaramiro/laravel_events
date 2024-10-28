@@ -18,9 +18,23 @@ class Events extends Model
         'date'
     ];
 
+    protected $guarded = [];
+
     public function user(){
 
         //to know who's the user whom belongs many events
         return $this->belongsTo('App\Models\User');
     }
+
+
+
+
+    public function users(){
+        //One Event have many User
+        return $this->belongsToMany('App\Models\User');
+    }
+
+
+
+    
 }
